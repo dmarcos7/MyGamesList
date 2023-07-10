@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Registro</h1>
+    <hr>
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control"[(ngModel)]="usuario.email" name="email" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">No compartiremos la informacion de tu email con nadie</div>
+        </div>
+        <div class="mb-3">
+            <label for="username">Nombre de Usuario</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.username" name="username" id="username" aria-describedby="usernameHelp">
+            <div id="usernameHelp" class="form-text">El nombre de usuario es unico para cada usuario</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="usuario.password" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="confirmPassword">
+        </div>
+        <button type="submit" class="btn btn-primary"(click)="registrarse()">Registrarse</button>
+
+        <button type="submit" class="btn btn-primary" routerLink="/">Volver</button>
+    </form>
+</div>

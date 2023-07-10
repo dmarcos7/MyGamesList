@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card" style="width: 18rem;">
+            <img src="{{juego.imageUrl}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{juego.id}} - {{juego.titulo}}</p>
+              <p class="card-text">{{juego.descripcion}}</p>
+            </div>
+            <button *ngIf="rol=='admin'" class="btn btn-primary" (click)="irFormulario()">Editar</button>
+          </div>
+    </div>
+</div>

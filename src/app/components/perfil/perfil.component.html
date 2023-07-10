@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card estilo-carta-perfil">
+        <img src="{{usuario.imagen}}"  alt="..." class="img-thumbnail rounded-circle imagenPerfil">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">{{username}}</h5>
+          <!--a href="#" class="btn btn-primary">Go somewhere</a>-->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+
+      <div class="row">
+        <div class="col">
+          <h1 class="bordesLista">Completados</h1>
+          <div id="carouselExampleSlidesOnly" class="row">
+            <div class="col-6" *ngFor="let completado of completados">
+              <div class="carousel-item active imagenesJuego">
+                <img src="{{completado.imageUrl}}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1 class="bordesLista">En proceso</h1>
+          <div id="carouselExampleSlidesOnly" class="row">
+            <div class="col-6" *ngFor="let proceso of enProceso">
+              <div class="carousel-item active imagenesJuego">
+                <img src="{{proceso.imageUrl}}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h1 class="bordesLista">Pendientes</h1>
+        <div id="carouselExampleSlidesOnly" class="row">
+          <div class="col-6" *ngFor="let pendi of pendientes">
+            <div class="carousel-item active imagenesJuego">
+              <img src="{{pendi.imageUrl}}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

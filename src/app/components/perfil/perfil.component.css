@@ -1,0 +1,26 @@
+.imagenesJuego{
+    width: 50%;
+    height: 50%;
+}
+
+.bordesLista{
+    border-style: solid;
+    background: #4c2882;
+    color: azure;
+    text-align: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.imagenPerfil{
+    width: 30%;
+    vertical-align: middle;
+    align-self: center;
+    overflow: hidden;
+}
+
+.estilo-carta-perfil{
+    margin-top: 0.3em;
+    background-color: #4c2882;
+    color: azure;
+}

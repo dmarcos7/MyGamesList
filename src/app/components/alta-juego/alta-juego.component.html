@@ -1,0 +1,20 @@
+
+<div *ngIf="mostrar" id ="alerta" class="alert" role="alert">
+   {{mensaje}}
+</div>
+
+<form>
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Titulo</label>
+        <input type="text" class="form-control" name="titulo" [(ngModel)]="juego.titulo">
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" name="descripcion" [(ngModel)]="juego.descripcion">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="imageUrl">URL de la Imagen</label>
+        <input type="text" class="form-control" name="imageUrl" [(ngModel)]="juego.imageUrl">  
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="insertarJuego()">Añadir</button>
+</form>

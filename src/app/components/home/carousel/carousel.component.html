@@ -1,0 +1,24 @@
+<div class="container">
+  <form class="d-flex" role="search">
+      <input class="form-control me-2" [(ngModel)]="texto" name="texto" type="search" placeholder="Buscar"
+          aria-label="Search">
+      <button class="btn btn-primary" type="submit" (click)="buscarPorNombre()">Buscar</button>
+  </form>
+</div>
+<br>
+
+<div class="row g-4">
+  <div class="col-2" *ngFor="let juego of juegos">
+    <div class="card h-100">
+      <img src="{{juego.imageUrl}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{juego.titulo}}</h5>
+        <p class="card-text">{{juego.descripcion}}</p>
+        
+      </div>
+      <button class="btn btn-primary" (click)="onVerDetalle(juego.id)">Ir Detalle</button>
+      <button class="btn btn-success" id="openModalButton" (click)="anadirALista(juego.id)">Añadir a Lista</button>
+      <button *ngIf="rol=='admin'" class="btn btn-danger" (click)="onBorrarJuego(juego.id)">Eliminar</button>
+    </div>
+  </div>
+</div>
